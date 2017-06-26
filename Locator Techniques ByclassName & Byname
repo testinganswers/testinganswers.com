@@ -1,0 +1,21 @@
+package com.testinganswers;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class UseOfNameClassLocator {
+
+	public static void main(String[] args) {
+		
+		WebDriver oWebdriver = new FirefoxDriver();
+		
+		oWebdriver.get("http://www.testinganswers.com");
+		oWebdriver.manage().window().maximize();
+		oWebdriver.findElement(By.name("q")).sendKeys("selenium");
+		
+		oWebdriver.findElement(By.className("gsc-search-button")).click();
+
+	}
+
+}
