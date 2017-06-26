@@ -1,0 +1,23 @@
+package com.testinganswers;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class UseOfLinkTestandPartialLink {
+
+
+	public static void main(String[] args) {
+		
+		WebDriver oWebdriver = new FirefoxDriver();
+		oWebdriver.get("http://www.testinganswers.com");
+		oWebdriver.manage().window().maximize();
+		oWebdriver.findElement(By.linkText("2015")).click();
+		oWebdriver.findElement(By.partialLinkText("012")).click();
+		/*oWebdriver.get("http://www.samisite.com/test-csb2nf/id43.htm");
+		oWebdriver.manage().window().maximize();
+		oWebdriver.switchTo().frame(5);
+		oWebdriver.findElement(By.id("field_0")).sendKeys("Deepak Singh");*/
+	}
+
+}
