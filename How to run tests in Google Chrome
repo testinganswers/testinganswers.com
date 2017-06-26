@@ -1,0 +1,15 @@
+package com.testinganswers;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class RuntstCaseInChrome {
+
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\Drivers\\chromedriver\\chromedriver.exe");
+		WebDriver oWebdriver = new ChromeDriver();		
+		oWebdriver.get("http://www.testinganswers.com");
+	}
+
+}
