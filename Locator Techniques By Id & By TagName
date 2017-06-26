@@ -1,0 +1,26 @@
+package com.testinganswers;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class UseOfIdandTagName {
+
+	public static void main(String[] args) {
+		
+		WebDriver oWebdriver = new FirefoxDriver();
+		oWebdriver.get("http://www.samisite.com/test-csb2nf/id43.htm");
+		oWebdriver.manage().window().maximize();
+		
+		int framesize = oWebdriver.findElements(By.tagName("iframe")).size();
+		System.out.println("Frame Count: "+framesize);
+		
+		oWebdriver.switchTo().frame(5);
+		oWebdriver.findElement(By.id("field_0")).sendKeys("testinganswers.com");
+		System.out.println("Thank You for Watching this video");
+		
+		
+
+	}
+
+}
