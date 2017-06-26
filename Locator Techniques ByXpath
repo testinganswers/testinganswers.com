@@ -1,0 +1,23 @@
+package com.testinganswers;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class UseOfXPathLocator {
+
+	
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.gecko.driver", "D:\\Selenium\\Drivers\\geckodriver-v0.14.0\\geckodriver.exe");
+		
+		WebDriver oWebdriver = new FirefoxDriver();
+		oWebdriver.get("http://www.testinganswers.com");
+		oWebdriver.manage().window().maximize();
+		
+		oWebdriver.findElement(By.xpath(".//*[@id='BlogSearch1_form']/form/table/tbody/tr/td[1]/input")).sendKeys("interview");
+		
+		oWebdriver.findElement(By.xpath(".//*[@id='BlogSearch1_form']/form/table/tbody/tr/td[2]/input")).click();
+	}
+
+}
