@@ -1,1 +1,1 @@
-# testinganswers.com
+testinganswers.com - One of the most popular software testing blog with best testing tutorials and interview questions. Latest and complete information on manual testing methodologies, automation testing tools and bug tracking tools.
