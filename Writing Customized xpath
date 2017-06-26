@@ -1,0 +1,21 @@
+package com.testinganswers;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class CustomizedXpath {
+
+	
+	public static void main(String[] args) {
+		
+		WebDriver oWebdriver = new FirefoxDriver();
+		oWebdriver.manage().window().maximize();
+		oWebdriver.get("http://www.testinganswers.com");
+		//oWebdriver.findElement(By.xpath(".//input[@class='gsc-input']")).sendKeys("selenium interview questions");
+		oWebdriver.findElement(By.xpath(".//input[@title='search']")).sendKeys("selenium interview questions");
+		System.out.println("Thank you for watching this video");
+
+	}
+
+}
