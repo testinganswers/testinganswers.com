@@ -1,0 +1,29 @@
+package com.testinganswers;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class CSSSelector {
+
+	public static void main(String[] args) {
+		
+		WebDriver oWebdriver = new FirefoxDriver();
+		oWebdriver.manage().window().maximize();
+		oWebdriver.get("http://www.facebook.com");
+		
+		//Css Selector locator by using Tag#ID
+		oWebdriver.findElement(By.cssSelector("input#email")).sendKeys("testinganswers");
+		
+		//Css Selector locator by using Tag.Class
+		oWebdriver.findElement(By.cssSelector("input.inputtext")).sendKeys("testinganswers");
+		
+		//Css Selector locator by using tag[attribute=value]
+			oWebdriver.findElement(By.cssSelector("input[name=email]")).sendKeys("testinganswers");
+			
+		//Css Selector locator by using attribute tag.class[attribute=value]
+			oWebdriver.findElement(By.cssSelector("input.inputtext[tabindex='2']")).sendKeys("testinganswers");
+
+	}
+
+}
